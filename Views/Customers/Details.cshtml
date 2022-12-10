@@ -1,0 +1,66 @@
+﻿@model FinalProjectInsurance_TG.Models.Customer
+
+@{
+    ViewData["Title"] = "Details";
+}
+<article class="domu-article"> 
+    <img src="~/avatar.png" alt="Pojistenec" />
+
+
+<div>
+        <dl class="row"></dl>
+        <dd class="col-sm-8">
+            <h3>
+                    @Html.DisplayFor(model => model.Jmeno)
+                    @Html.DisplayFor(model => model.Prijmeni)
+            </h3>
+        </dd>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Ulice)
+        </dd>
+
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Mesto)
+        </dd>
+
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.PSC)
+        </dd>
+
+    </dl>
+        <dl class="row">
+
+            <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Telefon)
+            </dd>
+
+            <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Email)
+            </dd>
+
+        </dl>
+       </dl>
+</div>
+<div>
+    <p>
+    </p>
+</div>
+</article>
+<div>
+
+@*    <p class="tlacitko-odstavec">
+        <a asp-controller="Insurances" asp-action="Index" class="reference-tlacitko">Přidat pojištění</a>
+    </p>*@
+    <p class="tlacitko-odstavec">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="reference-tlacitko1">Editovat pojištěnce</a>
+    </p>
+</div>
+
+    <br />
+ <div>
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Odstranit pojištěnce" class="btn btn-danger" id="redButton2" />
+        </form>
+</div>
+

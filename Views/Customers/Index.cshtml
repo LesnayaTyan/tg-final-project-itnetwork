@@ -1,0 +1,60 @@
+﻿@model IEnumerable<FinalProjectInsurance_TG.Models.Customer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Pojištěnci</h1>
+
+<p class="tlacitko-odstavec">
+    <a asp-action="Create" class="reference-tlacitko">Nový pojištěnec</a>
+</p>
+<br />
+<table class="table" border="2">
+    <thead>
+        <tr>
+            <th>
+                Jméno
+            </th>
+            <th>
+                Bydliště
+            </th>
+            <th>
+                
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr border="1">
+            <td>
+               <a asp-action="Details" asp-route-id="@item.Id">
+
+                @Html.DisplayFor(modelItem => item.Jmeno)
+                @Html.DisplayFor(modelItem => item.Prijmeni)
+                </a>
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Ulice)
+                @Html.DisplayFor(modelItem => item.Mesto)
+                @Html.DisplayFor(modelItem => item.PSC)
+            </td>
+                <td>
+                </td>
+            <td>
+                    <div class="container-buttons">
+                        <p class="tlacitko-odstavec">
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="reference-tlacitko2">Odstranit</a>
+                        </p>
+                        <p class="tlacitko-odstavec">
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="reference-tlacitko1">Editovat</a>
+                        </p>
+                    </div>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

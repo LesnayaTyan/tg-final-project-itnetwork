@@ -1,0 +1,97 @@
+﻿@model FinalProjectInsurance_TG.Models.Insurance
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editovat</h1>
+
+<h4>Pojištění</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+
+            <div class="row">
+                <div class="col">
+                    <label asp-for="Pojisteni" class="control-label">Pojištění</label>
+                    <input asp-for="Pojisteni" class="form-control" />
+                    <span asp-validation-for="Pojisteni" class="text-danger"></span>
+                </div>
+        
+           
+
+             
+                <div class="col">
+                    <label asp-for="PredmetPojisteni" class="control-label">Předmět pojištění</label>
+                    <input asp-for="PredmetPojisteni" class="form-control" />
+                    <span asp-validation-for="PredmetPojisteni" class="text-danger"></span>
+                </div>
+            </div>
+            <br />
+
+            <div class="row">
+                <div class="col">
+                    <label asp-for="Castka" class="control-label">Částka</label>
+                    <input asp-for="Castka" class="form-control" />
+                    <span asp-validation-for="Castka" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            <br />
+            <div class="row">
+                <div class="col">
+               
+                </div>
+                <br />
+
+
+                <div class="col">
+                    <label asp-for="PlatnostOd" class="control-label">Platnost od</label>
+                    <input asp-for="PlatnostOd" class="form-control" />
+                    <span asp-validation-for="PlatnostOd" class="text-danger"></span>
+                </div>
+            </div>
+            <br />
+
+            <div class="row">
+                <div class="col">
+                </div>
+
+
+
+                <div class="col">
+                    <label asp-for="PlatnostDo" class="control-label">Platnost do</label>
+                    <input asp-for="PlatnostDo" class="form-control" />
+                    <span asp-validation-for="PlatnostDo" class="text-danger"></span>
+                </div>
+            </div>
+            <br />
+
+
+
+@*            <div class="form-group">
+                <label asp-for="CustomerId" class="control-label"></label>
+                <select asp-for="CustomerId" class="form-control" asp-items="ViewBag.CustomerId"></select>
+                <span asp-validation-for="CustomerId" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <input type="submit" value="Ulozit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="inner">
+    <p class="tlacitko-odstavec">
+        <a asp-action="Index" class="reference-tlacitko3">Zpet</a>
+    </p>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
