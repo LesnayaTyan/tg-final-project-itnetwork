@@ -51,16 +51,14 @@
             @Html.DisplayFor(model => model.PSC)
         </dd>
     </dl>
-    
-    <form asp-action="Delete">
+</div>
+<form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Odstranit" class="btn btn-danger" id="redButton" />
 
-    </form>
+</form>
 
-<div class="inner">
-    <p class="tlacitko-odstavec">
+@*<div class="inner">
         <a asp-action="Index" class="reference-tlacitko3">Zpet</a>
-    </p>
-</div>
-</div>
+</div>*@
+

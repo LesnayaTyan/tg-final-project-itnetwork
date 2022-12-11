@@ -93,12 +93,14 @@ nav ul {
 .reference-tlacitko {
     background: #0d7ebf;
     color: white;
+    display:flex;
+    justify-content: center;
     font-size: 1.1em;
     text-decoration: none;
-    padding: 10px;
-    border-radius: 5px;
     padding: 15px;
-    margin: 360px;
+    border-radius: 5px;
+/*    padding: 15px;*/
+    margin: 20px 250px 20px 250px;
 }
 
 .reference-tlacitko1 {
@@ -145,7 +147,7 @@ nav ul {
     margin: 5px;
 }
 #redButton{
-    padding: 6px 3px;
+    padding: 7px 3px;
     margin: 5px;
 }
 #redButton2 {
